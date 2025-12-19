@@ -10,6 +10,7 @@ use App\Models\Explore;
 class ExploreController extends Controller
 {
     //
+
     public function index() {
         $explore = Explore::latest()->paginate(5);
         return new GetResource($explore);
