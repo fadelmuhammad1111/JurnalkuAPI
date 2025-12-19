@@ -21,9 +21,9 @@ class UserController extends Controller
     {
         // Validasi input
         $credentials = $request->validate([
-            'email' => ['required', 'email'],
-            'password' => ['required'],
-        ]);
+            'nis' => 'required|integer',
+            'password' => 'required',
+        ]);        
 
         // Cek kredensial
         if (Auth::attempt($credentials)) {
